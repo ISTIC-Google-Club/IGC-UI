@@ -2,6 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+
+import {Grid,Col} from './components/grid/grid'
+
 const App = () => {
   return (
     <div className="App">
@@ -19,6 +22,13 @@ const App = () => {
           Learn React
         </a>
       </header>
+       <Grid>
+        <Col>azeraer</Col>
+        <Col>azeraer</Col>
+        <Col>azeraer</Col>
+        
+        
+      </Grid> 
     </div>
   );
 }
