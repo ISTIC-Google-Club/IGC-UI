@@ -5,9 +5,16 @@ import styled from 'styled-components';
 
 
 const Grid=(props:any)=>{
+    console.log(props.children);
     const Row= styled.div`
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    grid-gap:${props.gap}px;
+    grid-row-gap:${props.rowgap}px;
+    grid-column-gap: ${props.colgap}px;
+    @media (max-width: 900px) {
+        display: block;
+  }
     
   `
     return(
@@ -23,20 +30,15 @@ const Grid=(props:any)=>{
 
 
 const Col=(props:any)=>{
-    
+   
     
     const Cols= styled.div`
-   background: #000;
-   grid-gap: 10px;
+   background:red;
+   grid-column: span ${props.span};
   `
-    return(
-        
-        <div>
-            
-            <Cols>{props.children}</Cols> 
- 
   
-            </div>
+    return(
+         <Cols>{props.children}</Cols> 
     )
 }
 
